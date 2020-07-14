@@ -1,0 +1,11 @@
+type = "pv"
+kernel = "9xenpcf"
+memory = 256
+name = "9xen"
+vif = [ 'script=vif-bridge,bridge=br0']
+vdispl = [ 'connectors=eDP-1:1366x768' ]
+vkb = [ 'backend-type=linux,unique-id=K:/dev/input/event5;P:/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-mouse,width=1366,height=768' ]
+disk = [ '9xen.img,,sda' ]
+# This is the equivalent of plan9.ini:
+extra="\nbootfile=9pc\nnobootprompt=local!/dev/sd00/fscache\nuser=glenda\nfourcc=XR24\n"
+
